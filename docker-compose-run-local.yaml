@@ -1,0 +1,13 @@
+version: '3.5'
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-go-api
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=api
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/create.sql
+    ports:
+      - "5432:5432"
