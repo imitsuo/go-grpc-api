@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option go_package = "go-grpc-api/grpc/flights/flights";
+// option java_multiple_files = true;
+// option java_package = "io.grpc.examples.helloworld";
+// option java_outer_classname = "HelloWorldProto";
+
+package flights;
+
+// The greeting service definition.
+service FlightService {
+  rpc List (ListRequest) returns (stream ListReply) {}
+}
+
+message ListRequest {
+  string filter = 1;
+}
+
+message ListReply {
+  int32 Year = 1;
+  int32 Month = 2;
+  int32 DayofMonth = 3; 
+  int32 DayOfWeek = 4;
+  float DepTime = 5;
+  int32 CRSDepTime = 6;
+  float ArrTime = 7;
+  int32 CRSArrTime = 8;
+  string UniqueCarrier = 9;
+}

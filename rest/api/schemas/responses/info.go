@@ -1,5 +1,5 @@
-package responses
+// package responses
 
-type InfoResponse struct {
-	Message string `json:"message"`
-}
+// type InfoResponse struct {
+// 	Message string `json:"message"`
+// }
