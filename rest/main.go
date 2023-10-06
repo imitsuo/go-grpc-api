@@ -1,18 +1,18 @@
-package main
+// package main
 
-import (
-	api "grpc-api/api/app"
-	"grpc-api/api/configs"
-)
+// import (
+// 	api "grpc-api/api/app"
+// 	"grpc-api/api/configs"
+// )
 
-var settings = configs.GetSettings()
+// var settings = configs.GetSettings()
 
-func main() {
-	app := api.MakeApp()
+// func main() {
+// 	app := api.MakeApp()
 
-	portListen := ":" + settings["PORT"]
-	err := app.Listen(portListen)
-	if err != nil {
-		panic(err)
-	}
-}
+// 	portListen := ":" + settings["PORT"]
+// 	err := app.Listen(portListen)
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// }
